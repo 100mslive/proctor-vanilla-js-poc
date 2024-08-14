@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "@100mslive/hms-video-store": "^0.12.16"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}
