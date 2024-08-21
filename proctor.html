@@ -64,7 +64,7 @@
 
             const token = document.getElementById('authToken').value; // Get the input URL
             const iframeGrid = document.getElementById('iframeGrid'); // Get the iframe grid container
-            console.log("process ", import.meta.env);
+            console.log("process ", import.meta.env, NODE_ENV);
             iframeGrid.innerHTML = ''; // Clear any existing iframes
 
             ['video', 'screen'].forEach(type => {
