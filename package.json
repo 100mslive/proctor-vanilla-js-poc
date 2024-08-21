@@ -1,7 +1,9 @@
 {
   "scripts": {
-    "dev": "vite build --mode production && vite",
-    "build": "vite build"
+    "dev": "npm run build && NODE_ENV=development vite --mode development",
+    "prod": "npm run build:prod && NODE_ENV=production vite --mode production",
+    "build:prod": "vite build --mode production",
+    "build": "vite build --mode development"
   },
   "dependencies": {
     "@100mslive/hms-video-store": "^0.12.16"
