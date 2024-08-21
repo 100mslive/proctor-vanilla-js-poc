@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev": "vite",
+    "dev": "vite build --mode production && vite",
     "build": "vite build"
   },
   "dependencies": {
