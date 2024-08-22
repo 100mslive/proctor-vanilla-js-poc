@@ -72,7 +72,7 @@
                 iframeContainer.className = 'iframe-container';
 
                 const iframe = document.createElement('iframe');
-                iframe.src = `http://localhost:5173/?token=${token}&type=${type}`;
+                iframe.src = `${location.origin}?token=${token}&type=${type}`;
                 iframe.allow = 'microphone;camera;display-capture;';
                 iframe.allowFullscreen = true;
 
