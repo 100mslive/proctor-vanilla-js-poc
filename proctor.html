@@ -57,14 +57,14 @@
     <!-- Container for the iFrames -->
     <div id="iframeGrid"></div>
 
-    <script type="module">
+    <script>
         // Function to create and update iframe sources
         document.getElementById('form').addEventListener('submit', function (event) {
             event.preventDefault(); // Prevent the form from submitting normally
 
             const token = document.getElementById('authToken').value; // Get the input URL
             const iframeGrid = document.getElementById('iframeGrid'); // Get the iframe grid container
-            console.log("process ", import.meta.env, process, NODE_ENV);
+
             iframeGrid.innerHTML = ''; // Clear any existing iframes
 
             ['video', 'screen'].forEach(type => {
@@ -72,7 +72,7 @@
                 iframeContainer.className = 'iframe-container';
 
                 const iframe = document.createElement('iframe');
-                iframe.src = `${import.meta.env?.PROD ? 'https://proctor-vanilla-js-poc.vercel.app/' : 'http:://localhost:5173/'}?token=${token}&type=${type}`;
+                iframe.src = `${location.origin}?token=${token}&type=${type}`;
                 iframe.allow = 'microphone;camera;display-capture;';
                 iframe.allowFullscreen = true;
 
